@@ -805,9 +805,11 @@
                     $("#" + changedID).val("");
                     $("#" + changedID).focus();
                  
+                    //Subtract the new value from the original subtotal to 
+                    //  reset the calculator for the invalid entry
                     var resetTotal = myTotal - newVal;
-
                     $("#" + totalsID).val(resetTotal);
+                    
 
                 } else {
 

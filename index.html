@@ -776,6 +776,8 @@
                 var myTotal = 0;
                 var myMax = 5001;
                 var currentTotal = 0;
+                
+
                 if (changedClass == "TextBoxesGroup_RRSP") {
                     currentTotal = getTotals(true, false);
                 } else if (changedClass == "TextBoxesGroup_Charity") {
@@ -783,6 +785,8 @@
                 } else {
                     currentTotal = getTotals(false, false);
                 }
+
+
                 $("." + changedClass).each(function(){
                     if ($(this).val() == "") {
                         myTotal = myTotal + 0;
@@ -791,12 +795,19 @@
                     }
                     
                  });
+
                 var tempTotal = currentTotal + parseInt(newVal);
+
                 if (tempTotal >= myMax ) {
                     alert("You can't use more than $" + (myMax-1) + ".");
+                    
                     //Reset the last changed textbox's value to 0
                     $("#" + changedID).val("");
                     $("#" + changedID).focus();
+                 
+                    var resetTotal = myTotal - newVal;
+
+                    $("#" + totalsID).val(resetTotal);
 
                 } else {
 
@@ -833,6 +844,7 @@
 
             //Updates the Grand Total field
             function updateTotal() {
+
                 var grandTotal = 0;
 
                 grandTotal = getTotals(false, false);

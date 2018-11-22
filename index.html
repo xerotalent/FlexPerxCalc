@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +39,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                Shopify Flex Perks Calculator <i class="fa fa-calculator"></i>
+               Flex Perks Calculator <i class="fa fa-calculator"></i>
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -97,14 +94,16 @@
                     <h4 class="service-heading">Step 1: Check Your Balances</h4>
 
                     <p class="text-muted">
-                        Review the amounts that you have left in your Health Care Spending Account and/or Lifestyle Spending Account (if applicable); you can do this by logging into your <a href="https://groupnet.greatwestlife.com/public/signin/login.public?e=&username=unauthenticated&dl=/pkmslogin.form" target="_blank">Great West Life</a> and/or <a href="https://app.league.com/sign-in" target="_blank">League</a> account. 
+                        Review the amounts that you have left in your Health Care Spending Account and/or 
+                        Lifestyle Spending Account (if applicable); you can do this by logging into your 
+                        <a href="https://gwl.greatwestlife.com/MyLogin" target="_blank">Great West Life</a> and/or <a href="https://app.league.com/sign-in" target="_blank">League</a> account. 
                     </p>
 
                     <hr />
                     
                     <div class="row">
                         <div class="col-xs-12 col-6 text-center">
-                            <a href="https://groupnet.greatwestlife.com/public/signin/login.public?e=&username=unauthenticated&dl=/pkmslogin.form" target="_blank">
+                            <a href="https://gwl.greatwestlife.com/MyLogin" target="_blank">
                                 <img src="https://www.greatwestlife.com/content/dam/gwl/images/logo/logo_rgb_en.svg" class="img-fluid" style="height: 50px;">
                             </a>
                         </div>
@@ -122,7 +121,7 @@
                     <div class="alert alert-info" role="alert">
                         <i class="fa fa-exclamation-circle fa-2x pull-left"></i>
                    
-                        Remember that your remaining balance on <strong>December 31st</strong> will carry over to the following year and will be available for 1 year.
+                        Remember that your remaining balance on <strong>December 31st, 2018</strong> will carry over to 2019 and will be available for 1 year.
                    
                     </div>                    
                 </div>
@@ -190,6 +189,22 @@
                                                 Prescription Drugs
                                             </td>
                                         </tr>      
+                                             <td class="text-center">
+                                                <i class="fa fa-hands fa-2x text-info"></i>
+                                             </td>
+                                             <td class="text-left">
+                                                Massage Therapy
+                                             </td>
+                                          </tr>                                          
+                                        </tr>      
+                                             <td class="text-center">
+                                                <i class="fa fa-comments fa-2x text-info"></i>
+                                             </td>
+                                             <td class="text-left">
+                                                Psychology
+                                             </td>
+                                          </tr>                                        
+                                   
                                     </table>                                                      
 
                                 </div>
@@ -241,7 +256,23 @@
                                                 Transit/Parking
                                             </td>
                                         </tr> 
-                                   
+                                   <tr>
+                                            <td class="text-center">
+                                                <i class="fa fa-paw fa-2x" style="color: #461bcc;"></i>
+                                            </td>
+                                            <td class="text-left">
+                                                Pet Care
+                                            </td>
+                                        </tr>                                    
+                                     <tr>
+                                            <td class="text-center">
+                                                <i class="fa fa-palette fa-2x" style="color: #461bcc;"></i>
+                                            </td>
+                                            <td class="text-left">
+                                                Art/Music Classes
+                                            </td>
+                                        </tr>                                        
+                           
                                     </table>
 
                                 </div>
@@ -286,8 +317,7 @@
             </div>
 
             <hr />
-
-            <!-- Step 4 -->
+             <!-- Step 4 -->
             <div class="row">
                 <div class="col-md-2 text-center">
                     <span class="fa-stack fa-3x hidden-xs">
@@ -308,16 +338,15 @@
                     </p>
 
                 </div>
+            </div>  
 
-            </div> 
+   </section>
 
-        </div>
-    </section>
 
-    <!-- Step 3 - Calculator -->
-    <section >
 
-        <!-- Calculator Form -->
+    <section id="calculator">
+
+             <!-- Calculator Form -->
         <div class="container">   
            
             <div class="col-lg-12 text-center" id="calculator" >
@@ -346,15 +375,7 @@
                             <table class="table table-sm">
                                 <tr>
                                     <td width="75%">
-                                        <label for="txtInsurance">Insurance copays and deductibles</label>
-                                    </td>
-                                    <td>
-                                        <input type="number" min="0" step="100.00" max="5000" class="form-control TextBoxesGroupHCSA" id="txtInsurance" placeholder="$0.00">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="75%">
-                                        <label for="txtOrtho">Orthodontics</label>
+                                        <label for="txtVision">Vision</label>
                                     </td>
                                     <td>
                                         <input type="number" min="0" step="100.00" max="5000" class="form-control TextBoxesGroupHCSA" id="txtOrtho" placeholder="$0.00">
@@ -362,7 +383,7 @@
                                 </tr>   
                                 <tr>
                                     <td width="75%">
-                                        <label for="txtVision">Vision</label>
+                                        <label for="txtDrugs">Massage Therapy</label>
                                     </td>
                                     <td>
                                         <input type="number" min="0" step="100.00" max="5000" class="form-control TextBoxesGroupHCSA" id="txtVision" placeholder="$0.00">
@@ -370,19 +391,30 @@
                                 </tr>  
                                 <tr>
                                     <td width="75%">
-                                        <label for="txtDrugs">Prescription Drugs</label>
+                                        <label for="txtOrtho">Orthodontist</label>
                                     </td>
                                     <td>
                                         <input type="number" min="0" step="100.00" max="5000" class="form-control TextBoxesGroupHCSA" id="txtDrugs" placeholder="$0.00">
                                     </td>
-                                </tr>   
+                                </tr> 
                                 <tr>
                                     <td width="75%">
-                                        <label for="txtAdditionalHealth">Additional Eligible Expenses</label> &nbsp;&nbsp;
-                                        <a data-toggle="modal" href="#modalEligibleHealth"><i class="fa fa-question-circle xero-blue" style="font-size: 16pt;"></i>
-                                            <small id="helpAdditionalHealth" class="form-text text-muted">
-                                               *See the list of eligble <b>HCSA</b> expenses
-                                            </small>
+                                        <a data-toggle="modal" data-target="#modalInsuranceCopay" style="cursor: pointer;">
+                                            <label for="txtInsurance">Deductibles/Out-of-Pocket Expenses </label>&nbsp;
+                                            <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <input type="number" min="0" step="100.00" max="5000" class="form-control TextBoxesGroupHCSA" id="txtInsurance" placeholder="$0.00">
+                                    </td>
+                                </tr>
+                                  
+                                <tr>
+                                    <td width="75%">
+                                        <label for="txtAdditionalHealth">Additional Eligible Expenses</label>
+                                        <a data-toggle="modal" href="#modalEligibleHealth" >
+                                            <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;" tooltip="See the list of eligble HCSA expenses"></i>
+                                         
                                         </a>
                                     </td>   
                                     <td>
@@ -459,10 +491,8 @@
                                 <tr>
                                     <td width="75%">
                                         <label for="txtAdditionalLifestyle">Additional Eligible Expenses</label> &nbsp;&nbsp;
-                                        <a data-toggle="modal" href="#modalEligibleLifestyle"> <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;"></i>
-                                            <small id="helpAdditionalLifestyle" class="form-text text-muted">
-                                                See list of eligble <b>LSA</b> expenses
-                                            </small>
+                                        <a data-toggle="modal" href="#modalEligibleLifestyle" > 
+                                                <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;" tooltip="See list of eligible LSA expenses."></i>
                                         </a>
                                     </td> 
                                     <td>
@@ -515,7 +545,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
                     <!-- CHARITY PANEL -->
-                    <div class="panel panel-default">
+                    <div class="panel panel-warning">
 
                         <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
                             <span class="fa-stack fa-2x">
@@ -544,7 +574,7 @@
                             <td class="text-right">
                           
                                 <label class="h2 text-bold">Total Amount: $</label> 
-                                    <input type="number" min="0" max="5000" class="text-right form-control-balance text-primary" style="font-weight: bold; font-size: 22pt; width: 175px !important;" id="txtTotal" placeholder="0.00">
+                                    <input type="number" min="0" max="5000" class="text-right form-control-balance text-primary" style="font-weight: bold; font-size: 22pt; width: 175px !important;" id="txtTotal" placeholder="0.00" disabled>
                                     <br />
                                     <small class="text-muted">*Maximum $5,000</small>  
                             </td>   
@@ -553,14 +583,9 @@
 
                 </div>
             </div>
+    </section>
+        
 
-            <div class="row">
-                <div class="col-12 text-center">
-                                         
-
-        </div>
-
-    </section>  
     
     <!-- WORKDAY BUTTON -->
     <section id="workday" class="bg-light" style="margin-top: 0px !important;">
@@ -646,9 +671,7 @@
                     <div class="embed-responsive embed-responsive-16by9">
                       <iframe class="embed-responsive-item" src="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/lines-330-331-eligible-medical-expenses-you-claim-on-your-tax-return/details-medical-expenses.html#rcndtnr frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>                                   
-
                 </div>
-
                 <div class="modal-footer" style="border-top: 0px !important;">
                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                         <i class="fa fa-times"></i>
@@ -658,12 +681,11 @@
             </div>
         </div>
     </div>
-
-
-
+                                              
+                                              
+                                              
     <!-- Modal - Lifestyle -->
     <div class="modal fade" tabindex="-1" id="modalEligibleLifestyle" role="dialog" aria-hidden="true">
-
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header panel-heading h4" style="margin-bottom: 0px; padding: 1rem; color: #461bcc; background-color: #ece6f8;">
@@ -673,15 +695,20 @@
                     </button>
                 </div>
                 <!-- Tab content -->
-                <div class="modal-body" style="padding: 0px;">
-
+                <div class="modal-body">
+                    
+                   <p class="text-center">
+                            <a href="https://taniablanchard.github.io/FlexPerksCalc/Shopify_Talent_Flex-Perks_2018-LSA.pdf" target="_blank" class="btn btn-sm" style="font-weight: 500; background-color: #461bcc; color: #fff;">
+                                <i class="fa fa-download"></i> Download
+                            </a>
+                   </p>                                     
+                                                             
                     <!-- iFrame to Eligiblity website -->
                     <div class="embed-responsive embed-responsive-16by9">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/nscGRxzH2gg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                                   
+                      <iframe width="560" height="315" src="https://taniablanchard.github.io/FlexPerksCalc/Shopify_Talent_Flex-Perks_2018-LSA.pdf#view=FitH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>   
-
                 </div>
-
                 <div class="modal-footer" style="border-top: 0px !important;">
                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                         <i class="fa fa-times"></i>
@@ -691,44 +718,72 @@
             </div>
         </div>
     </div>
+                                              
+                                              
+    <!-- Modal - Out of Pocket Expenses -->
+    <div class="modal fade" tabindex="-1" id="modalInsuranceCopay" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content panel-info">
+                <div class="modal-header panel-heading h4" style="margin-bottom: 0px; padding: 1rem;">
+                    <i class="fa fa-stethoscope"></i> &nbsp; What are Out-of-Pocket Expenses?
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-window-close"></i>
+                    </button>
+                </div>
+                <!-- Tab content -->
+                <div class="modal-body">
+                    <!-- Definition goes here -->
 
+
+                   <p>
+                        <strong>Deductibles:</strong> The amount you pay for covered health care services before our insurance plan starts to pay.
+                   </p>
+
+                   <p>
+                        <strong>Reimbursement Levels:</strong> The percentage of eligible expenses above the deductible that is eligible for reimbursement under the plan.                               
+                   </p>
+                   <p>
+                        <strong>Plan maximums:</strong> The annual maximum of coverage eligible under each benefit.
+                   </p>
+                   <p>                  
+                        <strong>Example:</strong> Massage Therapy has a reimbursement level of 80% and an annual maximum of $300. 
+                    </p>
+                    <p>
+                    You can find all the details on the out of pocket expenses on page 4 to 6 of the Great West Life Benefit Booklet
+                    </p>
+                </div>
+                <div class="modal-footer" style="border-top: 0px !important;">
+                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                        <i class="fa fa-times"></i>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>                                              
     <!-- ************************* -->
-
-
     <!-- ************************* -->
     <!-- JQuery core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     <!-- Bootstrap core JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
-
-
     <!-- Custom scripts for this template -->
     <script src="calc.js"></script>
-
     <script>
-
         /* CALCULATOR FUNCTIONS */
             //Updates the balance of a category
             function updateBalance(changedID, newVal, changedClass, totalsID) {
-
                 var myTotal = 0;
                 var myMax = 5001;
-
                 var currentTotal = 0;
-
                 if (changedClass == "TextBoxesGroup_RRSP") {
                     currentTotal = getTotals(true, false);
                 } else if (changedClass == "TextBoxesGroup_Charity") {
                     currentTotal = getTotals(false, true);
                 } else {
                     currentTotal = getTotals(false, false);
-
                 }
-
-
                 $("." + changedClass).each(function(){
-
                     if ($(this).val() == "") {
                         myTotal = myTotal + 0;
                     } else {
@@ -736,13 +791,9 @@
                     }
                     
                  });
-
-
                 var tempTotal = currentTotal + parseInt(newVal);
-
                 if (tempTotal >= myMax ) {
                     alert("You can't use more than $" + (myMax-1) + ".");
-
                     //Reset the last changed textbox's value to 0
                     $("#" + changedID).val("");
                     $("#" + changedID).focus();

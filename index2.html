@@ -307,12 +307,248 @@
                 </div>
                 <div class="col-md-10">
 
-                    <h4 class="service-heading">Step 3: Estimate Your Amounts</h4>
+                        <!-- calculator -->
+                        <section id="calculator">
 
-                    <p class="text-muted">
-                        Using the calculator below, you can estimate the amounts you wish to contribute to your accounts.
-                    </p>
-                    <br />
+                                 <!-- Calculator Form -->
+                            <div class="container">   
+                               
+                                <div class="col-lg-12 text-center" id="calculator" >
+
+                                    <h1 class="section-heading text-uppercase"><i class="fa fa-calculator"></i> Calculator</h2>
+
+                                </div>
+                                
+                                <hr />
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                                        <!-- HEALTH CARE PANEL -->
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fa fa-circle fa-stack-2x text-info"></i>
+                                                    <i class="fa fa-stethoscope fa-stack-1x fa-inverse"></i>
+                                                </span>                             
+                                                <br /> Health Spending Account
+                                            </div>
+                                            <div class="panel-body">
+
+                                     
+                                                <table class="table table-sm">
+                                                    <tr>
+                                                        <td width="75%">
+                                                            <label for="txtVision">Vision</label>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtOrtho" placeholder="$0.00">
+                                                        </td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td width="75%">
+                                                            <label for="txtDrugs">Massage Therapy</label>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtVision" placeholder="$0.00">
+                                                        </td>
+                                                    </tr>  
+                                                    <tr>
+                                                        <td width="75%">
+                                                            <label for="txtOrtho">Orthodontist</label>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtDrugs" placeholder="$0.00">
+                                                        </td>
+                                                    </tr> 
+                                                    <tr>
+                                                        <td width="75%">
+                                                            <a data-toggle="modal" data-target="#modalInsuranceCopay" style="cursor: pointer;">
+                                                                <label for="txtInsurance">Out-of-Pocket Expenses </label>&nbsp;
+                                                                <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtInsurance" placeholder="$0.00">
+                                                        </td>
+                                                    </tr>
+                                                      
+                                                    <tr>
+                                                        <td width="75%">
+                                                            <label for="txtAdditionalHealth">Additional Eligible Expenses</label>
+                                                            <a data-toggle="modal" href="#modalEligibleHealth" >
+                                                                <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;" tooltip="See the list of eligble HCSA expenses"></i>
+                                                             
+                                                            </a>
+                                                        </td>   
+                                                        <td>
+                                                            <input type="number" class="form-control TextBoxesGroupHCSA" id="txtAdditionalHealth" min="0" max="5000"  placeholder="$0.00">
+                                                        </td>
+                                                    </tr>                                                                                                                        
+                                                </table>                        
+
+
+                                            </div>
+
+                                            <div class="panel-footer text-right" style="color: #31708f; background-color: #d9edf7; border-color: #31708f;">
+
+                                                <label class="h5">HSA Total: $</label>
+                                                <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals" style="font-weight: bold; font-size: 18pt; width:100px !important;" id="txtBalanceHCSA" placeholder="0.00" disabled>
+
+                                                <button id="cmdResetHCSA" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;">
+                                                    <i class="fa fa-redo"></i>
+                                                </button> 
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+
+                                        <!-- LIFESTYLE PANEL -->
+                                        <div class="panel" style="border-color: #ece6f8;">
+                                            <div class="panel-heading text-center" style="background-color: #ece6f8; color: #461bcc; border-color: #ece6f8; margin-bottom: 0px !important;">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i class="fa fa-bicycle fa-stack-1x fa-inverse"></i>
+                                                </span>                             
+                                                <br /> Lifestyle Spending Account
+                                            </div>
+                                            <div class="panel-body">
+
+                                                <table class="table table-sm">
+                                                    <tr>
+                                                        <td width="75%">
+                                                            <label for="txtGym">Gym/Fitness Membership</label>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtGym" placeholder="$0.00">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="75%">
+                                                            <label for="txtDaycare">Daycare Costs</label>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtDaycare" placeholder="$0.00">
+                                                        </td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td width="75%">
+                                                            <label for="txtTransit">Transit/Parking</label>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtTransit" placeholder="$0.00">
+                                                        </td>
+                                                    </tr>  
+                                                    <tr>
+                                                        <td width="75%">
+                                                            <label for="txtCleaning">House Cleaning</label>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtCleaning" placeholder="$0.00">
+                                                        </td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td width="75%">
+                                                            <label for="txtAdditionalLifestyle">Additional Eligible Expenses</label> &nbsp;&nbsp;
+                                                            <a data-toggle="modal" href="#modalEligibleLifestyle" > 
+                                                                    <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;" tooltip="See list of eligible LSA expenses."></i>
+                                                            </a>
+                                                        </td> 
+                                                        <td>
+                                                            <input type="number" class="form-control TextBoxesGroupLSA" id="txtAdditionalLifestyle" min="0" max="5450" placeholder="$0.00">
+                                                        </td>
+                                                    </tr>                          
+                                                                                                                                 
+                                      
+                                                </table>
+
+                                            </div>
+
+                                            <div class="panel-footer text-right" style="background-color: #ece6f8; color: #461bcc; border-color: #461bcc;">
+                                                <label class="h5">LSA Total: $</label>
+                                                <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals" style="font-weight: bold; font-size: 18pt; width:110px !important;" id="txtBalanceLSA" placeholder="0.00" disabled>
+
+                                                <button id="cmdResetLSA" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;"><i class="fa fa-redo"></i></button> 
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="row">
+
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                                        <!-- RRSP CARE PANEL -->
+                                        <div class="panel panel-success">
+                                            <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i class="fa fa-piggy-bank fa-stack-1x fa-inverse"></i>
+                                                </span>                             
+                                                <br /> RRSP Contributions
+                                            </div>                        
+                        
+                                            <div class="panel-body text-right">
+                                                <label class="h5">RRSP Total: $</label>
+                                                <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals TextBoxesGroup_RRSP" style="font-weight: bold; font-size: 18pt; width:110px !important;" id="txtBalanceRRSP" placeholder="0.00">
+                                                <button id="cmdResetRRSP" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;"><i class="fa fa-redo"></i></button>   
+                                            </div>
+                                        </div>
+
+                                    </div> 
+
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                                        <!-- CHARITY PANEL -->
+                                        <div class="panel panel-warning">
+
+                                            <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
+                                                <span class="fa-stack fa-2x">
+                                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                                    <i class="fa fa-hand-holding-usd fa-stack-1x fa-inverse"></i>
+                                                </span>                             
+                                                <br /> Charitable Donations
+                                            </div>                          
+                                            <div class="panel-body text-right">
+                                                <label class="h5">Donations Total: $</label>
+                                                <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals TextBoxesGroup_Charity" style="font-weight: bold; font-size: 18pt; width:110px !important;" id="txtBalanceCharity" placeholder="0.00">
+
+                                                <button id="cmdResetCharity" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;"><i class="fa fa-redo"></i></button> 
+                                            </div>                    
+                                        </div>
+                                        
+                                    </div>  
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12 text-right">
+
+                                        <!-- TOTAL ROW -->       
+                                        <table class="table">
+                                            <tr>
+                                                <td class="text-right">
+                                              
+                                                    <label class="h2 text-bold">Total Amount: $</label> 
+                                                        <input type="number" min="0" max="5450" class="text-right form-control-balance text-primary" style="font-weight: bold; font-size: 22pt; width: 175px !important;" id="txtTotal" placeholder="0.00" disabled>
+                                                        <br />
+                                                        <small class="text-muted">*Maximum $5,450</small>  
+                                                </td>   
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                </div>
+                        </section>
+
                 </div>
             </div>
 
@@ -344,246 +580,7 @@
 
 
 
-    <section id="calculator">
 
-             <!-- Calculator Form -->
-        <div class="container">   
-           
-            <div class="col-lg-12 text-center" id="calculator" >
-
-                <h1 class="section-heading text-uppercase"><i class="fa fa-calculator"></i> Calculator</h2>
-
-            </div>
-            
-            <hr />
-
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-
-                    <!-- HEALTH CARE PANEL -->
-                    <div class="panel panel-info">
-                        <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x text-info"></i>
-                                <i class="fa fa-stethoscope fa-stack-1x fa-inverse"></i>
-                            </span>                             
-                            <br /> Health Spending Account
-                        </div>
-                        <div class="panel-body">
-
-                 
-                            <table class="table table-sm">
-                                <tr>
-                                    <td width="75%">
-                                        <label for="txtVision">Vision</label>
-                                    </td>
-                                    <td>
-                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtOrtho" placeholder="$0.00">
-                                    </td>
-                                </tr>   
-                                <tr>
-                                    <td width="75%">
-                                        <label for="txtDrugs">Massage Therapy</label>
-                                    </td>
-                                    <td>
-                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtVision" placeholder="$0.00">
-                                    </td>
-                                </tr>  
-                                <tr>
-                                    <td width="75%">
-                                        <label for="txtOrtho">Orthodontist</label>
-                                    </td>
-                                    <td>
-                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtDrugs" placeholder="$0.00">
-                                    </td>
-                                </tr> 
-                                <tr>
-                                    <td width="75%">
-                                        <a data-toggle="modal" data-target="#modalInsuranceCopay" style="cursor: pointer;">
-                                            <label for="txtInsurance">Out-of-Pocket Expenses </label>&nbsp;
-                                            <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtInsurance" placeholder="$0.00">
-                                    </td>
-                                </tr>
-                                  
-                                <tr>
-                                    <td width="75%">
-                                        <label for="txtAdditionalHealth">Additional Eligible Expenses</label>
-                                        <a data-toggle="modal" href="#modalEligibleHealth" >
-                                            <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;" tooltip="See the list of eligble HCSA expenses"></i>
-                                         
-                                        </a>
-                                    </td>   
-                                    <td>
-                                        <input type="number" class="form-control TextBoxesGroupHCSA" id="txtAdditionalHealth" min="0" max="5000"  placeholder="$0.00">
-                                    </td>
-                                </tr>                                                                                                                        
-                            </table>                        
-
-
-                        </div>
-
-                        <div class="panel-footer text-right" style="color: #31708f; background-color: #d9edf7; border-color: #31708f;">
-
-                            <label class="h5">HSA Total: $</label>
-                            <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals" style="font-weight: bold; font-size: 18pt; width:100px !important;" id="txtBalanceHCSA" placeholder="0.00" disabled>
-
-                            <button id="cmdResetHCSA" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;">
-                                <i class="fa fa-redo"></i>
-                            </button> 
-
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-
-
-                    <!-- LIFESTYLE PANEL -->
-                    <div class="panel" style="border-color: #ece6f8;">
-                        <div class="panel-heading text-center" style="background-color: #ece6f8; color: #461bcc; border-color: #ece6f8; margin-bottom: 0px !important;">
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-bicycle fa-stack-1x fa-inverse"></i>
-                            </span>                             
-                            <br /> Lifestyle Spending Account
-                        </div>
-                        <div class="panel-body">
-
-                            <table class="table table-sm">
-                                <tr>
-                                    <td width="75%">
-                                        <label for="txtGym">Gym/Fitness Membership</label>
-                                    </td>
-                                    <td>
-                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtGym" placeholder="$0.00">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="75%">
-                                        <label for="txtDaycare">Daycare Costs</label>
-                                    </td>
-                                    <td>
-                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtDaycare" placeholder="$0.00">
-                                    </td>
-                                </tr>   
-                                <tr>
-                                    <td width="75%">
-                                        <label for="txtTransit">Transit/Parking</label>
-                                    </td>
-                                    <td>
-                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtTransit" placeholder="$0.00">
-                                    </td>
-                                </tr>  
-                                <tr>
-                                    <td width="75%">
-                                        <label for="txtCleaning">House Cleaning</label>
-                                    </td>
-                                    <td>
-                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtCleaning" placeholder="$0.00">
-                                    </td>
-                                </tr>   
-                                <tr>
-                                    <td width="75%">
-                                        <label for="txtAdditionalLifestyle">Additional Eligible Expenses</label> &nbsp;&nbsp;
-                                        <a data-toggle="modal" href="#modalEligibleLifestyle" > 
-                                                <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;" tooltip="See list of eligible LSA expenses."></i>
-                                        </a>
-                                    </td> 
-                                    <td>
-                                        <input type="number" class="form-control TextBoxesGroupLSA" id="txtAdditionalLifestyle" min="0" max="5450" placeholder="$0.00">
-                                    </td>
-                                </tr>                          
-                                                                                                             
-                  
-                            </table>
-
-                        </div>
-
-                        <div class="panel-footer text-right" style="background-color: #ece6f8; color: #461bcc; border-color: #461bcc;">
-                            <label class="h5">LSA Total: $</label>
-                            <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals" style="font-weight: bold; font-size: 18pt; width:110px !important;" id="txtBalanceLSA" placeholder="0.00" disabled>
-
-                            <button id="cmdResetLSA" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;"><i class="fa fa-redo"></i></button> 
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-            <div class="row">
-
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-
-                    <!-- RRSP CARE PANEL -->
-                    <div class="panel panel-success">
-                        <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-piggy-bank fa-stack-1x fa-inverse"></i>
-                            </span>                             
-                            <br /> RRSP Contributions
-                        </div>                        
-    
-                        <div class="panel-body text-right">
-                            <label class="h5">RRSP Total: $</label>
-                            <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals TextBoxesGroup_RRSP" style="font-weight: bold; font-size: 18pt; width:110px !important;" id="txtBalanceRRSP" placeholder="0.00">
-                            <button id="cmdResetRRSP" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;"><i class="fa fa-redo"></i></button>   
-                        </div>
-                    </div>
-
-                </div> 
-
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-
-                    <!-- CHARITY PANEL -->
-                    <div class="panel panel-warning">
-
-                        <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-hand-holding-usd fa-stack-1x fa-inverse"></i>
-                            </span>                             
-                            <br /> Charitable Donations
-                        </div>                          
-                        <div class="panel-body text-right">
-                            <label class="h5">Donations Total: $</label>
-                            <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals TextBoxesGroup_Charity" style="font-weight: bold; font-size: 18pt; width:110px !important;" id="txtBalanceCharity" placeholder="0.00">
-
-                            <button id="cmdResetCharity" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;"><i class="fa fa-redo"></i></button> 
-                        </div>                    
-                    </div>
-                    
-                </div>  
-            </div>
-
-            <div class="row">
-                <div class="col-12 text-right">
-
-                    <!-- TOTAL ROW -->       
-                    <table class="table">
-                        <tr>
-                            <td class="text-right">
-                          
-                                <label class="h2 text-bold">Total Amount: $</label> 
-                                    <input type="number" min="0" max="5450" class="text-right form-control-balance text-primary" style="font-weight: bold; font-size: 22pt; width: 175px !important;" id="txtTotal" placeholder="0.00" disabled>
-                                    <br />
-                                    <small class="text-muted">*Maximum $5,450</small>  
-                            </td>   
-                        </tr>
-                    </table>
-
-                </div>
-            </div>
-    </section>
         
 
     

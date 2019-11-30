@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A small page for Shopify employees to calculate amounts for flex credits">
+    <title>Shopify - Flex Credits Calculator</title>
+   
+    
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- FontAwesome Icons CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Custom fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Jura:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this page -->
+
+    <!--
+    <link type="text/css" rel="stylesheet" href="https://xerotalent.github.io/FlexPerxCalc/calc.css">
+    
+    ***Use the link below if running from GitHub (replace the repo name)    
+    -->
+    
+    <link type="text/css" rel="stylesheet" href="calc.css">
+</head>
+
+
+<body id="page-top">
+
+
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+               Flex Credits Calculator <i class="fa fa-calculator"></i>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#page-top">Instructions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#calculator">Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#workday">League</a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#help">Need Help?</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-dark text-center" style="height: 200px;">
+        <div style="height: 210px;"></div>
+        <h1 class="section-heading text-uppercase"><i class="fa fa-book-reader"></i> Instructions</h1>
+    </div>
+
+
+    <section id="instructions" class="bg-light">
+        <!-- Instructions Section -->
+        <div class="container" >
+
+            <hr />
+
+            <!-- Step 1 -->
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <span class="fa-stack fa-3x hidden-xs">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-dollar-sign fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-2x hidden-sm hidden-md hidden-lg">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-dollar-sign fa-stack-1x fa-inverse"></i>
+                    </span>                    
+                </div>
+                <div class="col-md-7">
+
+                    <h4 class="service-heading">Step 1: Check Your Balances</h4>
+
+                    <p class="text-muted">
+                        Once you've made your health and dental selections, review the amounts that you have left in your Health Spending Account and/or 
+                        Lifestyle Spending Account (if applicable); you can do this by logging into your 
+                        <a href="https://gwl.greatwestlife.com/MyLogin" target="_blank">Great West Life</a> and/or <a href="https://app.league.com/sign-in" target="_blank">League</a> account. 
+                    </p>
+
+                    <hr />
+                    
+                    <div class="row">
+                        <div class="col-xs-12 col-6 text-center">
+                            <a href="https://gwl.greatwestlife.com/MyLogin" target="_blank">
+                                <img src="https://www.greatwestlife.com/content/dam/gwl/images/logo/logo_rgb_en.svg" class="img-fluid" style="height: 50px;">
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-6 text-center">
+                            <a href="https://app.league.com/sign-in" target="_blank">
+                                <img src="https://app.league.com/static/346cb7b0.svg" class="img-fluid" >
+                            </a>
+                        </div>
+                    </div>
+                    <br /><br />
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="alert alert-info" role="alert">
+                        <i class="fa fa-exclamation-circle fa-2x pull-left"></i>
+                   
+                        Remember that your remaining balance on <strong>December 31st, 2019</strong> will carry over to 2020 and will be available for 1 year.
+                   
+                    </div>                    
+                </div>
+            </div>
+            
+            <hr />
+
+            <!-- Step 2 -->
+            <div class="row">
+
+                
+                <div class="col-md-2 text-center">
+                    <span class="fa-stack fa-3x hidden-xs">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-lightbulb fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-2x hidden-sm hidden-md hidden-lg">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-lightbulb fa-stack-1x fa-inverse"></i>
+                    </span>                    
+                </div>
+                <div class="col-md-10">
+                    <h4 class="service-heading">Step 2: Plan For Your Upcoming Expenses</h4>
+                    <p class="text-muted">
+                        Think about the expenses that you or your dependents may have in the upcoming calendar year for services <strong>not covered</strong> under our basic <a href="https://drive.google.com/file/d/1ytR26VFkx1qhWsZoellheVr4bD6IwRUA/view" target="_blank">health and dental plan</a>. Some examples to consider:
+                    </p>
+
+
+                    <div class="row">
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+
+
+                            <!-- Health Care -->
+                            <div class="panel panel-info">
+                                <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
+                                     Health Care Spending Account
+                                </div>
+                                <div class="panel-body">
+
+                         
+
+                                    <table border="0" cellspacing="0" cellpadding="0" class="table table-sm bg-white" style="margin-bottom: 0px;">
+                                        <tr>
+                                            <td class="text-center">
+                                                <i class="fa fa-glasses fa-2x text-info"></i>
+                                            </td>
+                                            <td class="text-left">
+                                                Glasses or contact lenses
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <i class="fa fa-tooth fa-2x text-info"></i>
+                                            </td>
+                                            <td class="text-left">
+                                                Orthodontics
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <i class="fa fa-file-prescription fa-2x text-info"></i>
+                                            </td>
+                                            <td class="text-left">
+                                                Prescription Drugs
+                                            </td>
+                                        </tr>      
+                                             <td class="text-center">
+                                                <i class="fa fa-hands fa-2x text-info"></i>
+                                             </td>
+                                             <td class="text-left">
+                                                Massage Therapy
+                                             </td>
+                                          </tr>                                          
+                                        </tr>      
+                                             <td class="text-center">
+                                                <i class="fa fa-comments fa-2x text-info"></i>
+                                             </td>
+                                             <td class="text-left">
+                                                Psychology
+                                             </td>
+                                          </tr>                                        
+                                   
+                                    </table>                                                      
+
+                                </div>
+
+                                <div class="panel-footer text-center" style="color: #31708f; background-color: #d9edf7; border-color: #bce8f1; padding: 5px;">
+
+                                    <button type="button" class="btn btn-sm btn-info" style="font-weight: 500;" data-toggle="modal" data-target="#modalEligibleHealth">
+                                        See all Eligible <label class="hidden-xs">Health Care</label> Expenses
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center">
+
+
+                            <!-- Lifestyle -->
+                            <div class="panel" style="border-color: #ece6f8;">
+                                <div class="panel-heading text-center" style="background-color: #ece6f8; color: #461bcc; margin-bottom: 0px !important;">
+                                    Lifestyle Spending Account
+                                </div>
+                                <div class="panel-body">
+
+                    
+                                    <table border="0" cellspacing="0" cellpadding="0" class="table table-sm bg-white" style="margin-bottom: 0px;">
+                                        <tr>
+                                            <td class="text-center">
+                                                <i class="fa fa-dumbbell fa-2x" style="color: #461bcc;"></i>
+                                            </td>
+                                            <td class="text-left">
+                                                Gym/Fitness Memberships
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <i class="fa fa-child fa-2x" style="color: #461bcc;"></i>
+                                            </td>
+                                            <td class="text-left">
+                                                Daycare Costs 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">
+                                                <i class="fa fa-plane-departure fa-2x style="color: #461bcc;"></i>
+                                            </td>
+                                            <td class="text-left">
+                                                Travel
+                                            </td>
+                                        </tr> 
+                                   <tr>
+                                            <td class="text-center">
+                                                <i class="fa fa-paw fa-2x" style="color: #461bcc;"></i>
+                                            </td>
+                                            <td class="text-left">
+                                                Pet Care
+                                            </td>
+                                        </tr>                                    
+                                     <tr>
+                                            <td class="text-center">
+                                                <i class="fa fa-palette fa-2x" style="color: #461bcc;"></i>
+                                            </td>
+                                            <td class="text-left">
+                                                Art/Music Classes
+                                            </td>
+                                        </tr>                                        
+                           
+                                    </table>
+
+                                </div>
+
+                                <div class="panel-footer text-center" style="color: #8a6d3b; background-color: #ece6f8; border-color: #ece6f8; padding: 5px;">
+                                    <button type="button" class="btn btn-sm" style="font-weight: 500; background-color: #461bcc; color: #fff;" data-toggle="modal" data-target="#modalEligibleLifestyle">
+                                        See all Eligible <label class="hidden-xs">Lifestyle</label> Expenses
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- Step 3 -->
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <span class="fa-stack fa-3x hidden-xs">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-calculator fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-2x hidden-sm hidden-md hidden-lg">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-calculator fa-stack-1x fa-inverse"></i>
+                    </span>                    
+                </div>
+                <div class="col-md-10">
+
+                    <h4 class="service-heading">Step 3: Estimate Your Amounts</h4>
+
+                    <p class="text-muted">
+                        Using the calculator below, you can estimate the amounts you wish to contribute to your accounts.
+                    </p>
+                    <br />
+                </div>
+            </div>
+
+            <hr />
+             <!-- Step 4 -->
+            <div class="row">
+                <div class="col-md-2 text-center">
+                    <span class="fa-stack fa-3x hidden-xs">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-2x hidden-sm hidden-md hidden-lg">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-arrow-right fa-stack-1x fa-inverse"></i>
+                    </span>                    
+                </div>
+                <div class="col-md-10">
+
+                    <h4 class="service-heading">Step 4: Enter Amounts in League</h4>
+
+                    <p class="text-muted">
+                        Once you've determined the amounts you want to allocate, enter them in <a href="https://app.league.com/sign-in" target="_blank">League</a>.
+                    </p>
+
+                </div>
+            </div>  
+
+   </section>
+
+
+
+    <section id="calculator">
+
+             <!-- Calculator Form -->
+        <div class="container">   
+           
+            <div class="col-lg-12 text-center" id="calculator" >
+
+                <h1 class="section-heading text-uppercase"><i class="fa fa-calculator"></i> Calculator</h2>
+
+            </div>
+            
+            <hr />
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                    <!-- HEALTH CARE PANEL -->
+                    <div class="panel panel-info">
+                        <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x text-info"></i>
+                                <i class="fa fa-stethoscope fa-stack-1x fa-inverse"></i>
+                            </span>                             
+                            <br /> Health Spending Account
+                        </div>
+                        <div class="panel-body">
+
+                 
+                            <table class="table table-sm">
+                                <tr>
+                                    <td width="75%">
+                                        <label for="txtVision">Vision</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtOrtho" placeholder="$0.00">
+                                    </td>
+                                </tr>   
+                                <tr>
+                                    <td width="75%">
+                                        <label for="txtDrugs">Massage Therapy</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtVision" placeholder="$0.00">
+                                    </td>
+                                </tr>  
+                                <tr>
+                                    <td width="75%">
+                                        <label for="txtOrtho">Orthodontist</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtDrugs" placeholder="$0.00">
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <td width="75%">
+                                        <a data-toggle="modal" data-target="#modalInsuranceCopay" style="cursor: pointer;">
+                                            <label for="txtInsurance">Deductibles/Out-of-Pocket Expenses </label>&nbsp;
+                                            <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupHCSA" id="txtInsurance" placeholder="$0.00">
+                                    </td>
+                                </tr>
+                                  
+                                <tr>
+                                    <td width="75%">
+                                        <label for="txtAdditionalHealth">Additional Eligible Expenses</label>
+                                        <a data-toggle="modal" href="#modalEligibleHealth" >
+                                            <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;" tooltip="See the list of eligble HCSA expenses"></i>
+                                         
+                                        </a>
+                                    </td>   
+                                    <td>
+                                        <input type="number" class="form-control TextBoxesGroupHCSA" id="txtAdditionalHealth" min="0" max="5000"  placeholder="$0.00">
+                                    </td>
+                                </tr>                                                                                                                        
+                            </table>                        
+
+
+                        </div>
+
+                        <div class="panel-footer text-right" style="color: #31708f; background-color: #d9edf7; border-color: #31708f;">
+
+                            <label class="h5">HSA Total: $</label>
+                            <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals" style="font-weight: bold; font-size: 18pt; width:100px !important;" id="txtBalanceHCSA" placeholder="0.00" disabled>
+
+                            <button id="cmdResetHCSA" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;">
+                                <i class="fa fa-redo"></i>
+                            </button> 
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+
+                    <!-- LIFESTYLE PANEL -->
+                    <div class="panel" style="border-color: #ece6f8;">
+                        <div class="panel-heading text-center" style="background-color: #ece6f8; color: #461bcc; border-color: #ece6f8; margin-bottom: 0px !important;">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-bicycle fa-stack-1x fa-inverse"></i>
+                            </span>                             
+                            <br /> Lifestyle Spending Account
+                        </div>
+                        <div class="panel-body">
+
+                            <table class="table table-sm">
+                                <tr>
+                                    <td width="75%">
+                                        <label for="txtGym">Gym/Fitness Membership</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtGym" placeholder="$0.00">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="75%">
+                                        <label for="txtDaycare">Daycare Costs</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtDaycare" placeholder="$0.00">
+                                    </td>
+                                </tr>   
+                                <tr>
+                                    <td width="75%">
+                                        <label for="txtTransit">Transit/Parking</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtTransit" placeholder="$0.00">
+                                    </td>
+                                </tr>  
+                                <tr>
+                                    <td width="75%">
+                                        <label for="txtCleaning">House Cleaning</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" min="0" step="100.00" max="5450" class="form-control TextBoxesGroupLSA" id="txtCleaning" placeholder="$0.00">
+                                    </td>
+                                </tr>   
+                                <tr>
+                                    <td width="75%">
+                                        <label for="txtAdditionalLifestyle">Additional Eligible Expenses</label> &nbsp;&nbsp;
+                                        <a data-toggle="modal" href="#modalEligibleLifestyle" > 
+                                                <i class="fa fa-question-circle xero-blue" style="font-size: 16pt;" tooltip="See list of eligible LSA expenses."></i>
+                                        </a>
+                                    </td> 
+                                    <td>
+                                        <input type="number" class="form-control TextBoxesGroupLSA" id="txtAdditionalLifestyle" min="0" max="5450" placeholder="$0.00">
+                                    </td>
+                                </tr>                          
+                                                                                                             
+                  
+                            </table>
+
+                        </div>
+
+                        <div class="panel-footer text-right" style="background-color: #ece6f8; color: #461bcc; border-color: #461bcc;">
+                            <label class="h5">LSA Total: $</label>
+                            <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals" style="font-weight: bold; font-size: 18pt; width:110px !important;" id="txtBalanceLSA" placeholder="0.00" disabled>
+
+                            <button id="cmdResetLSA" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;"><i class="fa fa-redo"></i></button> 
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                    <!-- RRSP CARE PANEL -->
+                    <div class="panel panel-success">
+                        <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-piggy-bank fa-stack-1x fa-inverse"></i>
+                            </span>                             
+                            <br /> RRSP Contributions
+                        </div>                        
+    
+                        <div class="panel-body text-right">
+                            <label class="h5">RRSP Total: $</label>
+                            <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals TextBoxesGroup_RRSP" style="font-weight: bold; font-size: 18pt; width:110px !important;" id="txtBalanceRRSP" placeholder="0.00">
+                            <button id="cmdResetRRSP" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;"><i class="fa fa-redo"></i></button>   
+                        </div>
+                    </div>
+
+                </div> 
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                    <!-- CHARITY PANEL -->
+                    <div class="panel panel-warning">
+
+                        <div class="panel-heading text-center" style="margin-bottom: 0px !important;">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-hand-holding-usd fa-stack-1x fa-inverse"></i>
+                            </span>                             
+                            <br /> Charitable Donations
+                        </div>                          
+                        <div class="panel-body text-right">
+                            <label class="h5">Donations Total: $</label>
+                            <input type="number" min="0" max="5450" class="form-control-balance text-primary TextBoxesGroupTotals TextBoxesGroup_Charity" style="font-weight: bold; font-size: 18pt; width:110px !important;" id="txtBalanceCharity" placeholder="0.00">
+
+                            <button id="cmdResetCharity" class="btn btn-primary btn-sm button-reset" style="margin-top: 5px; margin-bottom: 20px;"><i class="fa fa-redo"></i></button> 
+                        </div>                    
+                    </div>
+                    
+                </div>  
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-right">
+
+                    <!-- TOTAL ROW -->       
+                    <table class="table">
+                        <tr>
+                            <td class="text-right">
+                          
+                                <label class="h2 text-bold">Total Amount: $</label> 
+                                    <input type="number" min="0" max="5450" class="text-right form-control-balance text-primary" style="font-weight: bold; font-size: 22pt; width: 175px !important;" id="txtTotal" placeholder="0.00" disabled>
+                                    <br />
+                                    <small class="text-muted">*Maximum $5,450</small>  
+                            </td>   
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+    </section>
+        
+
+    
+    <!-- LEAGUE BUTTON -->
+    <section id="League" class="bg-light" style="margin-top: 0px !important;">
+
+                  <div class="row" >                          
+                   <div class="col-12 text-center">
+                       <a href="https://app.league.com/sign-in" target="_blank">
+                        <img src="https://app.league.com/static/346cb7b0.svg" class="img-fluid" >
+                            </a>
+                        </div>
+                    </div>
+
+    </section>
+
+
+    <!-- Help -->
+    <section id="help">
+        <div class="container">
+
+            <!-- Main Heading-->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Need Help?</h2>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-12 text-center">
+
+                    <br />
+
+                    <ul class="list-unstyled">
+                        <li class="list-item">
+                            <a href="slack://channel?id=talent-questions&team=Shopify">
+                                <span class="fa-stack fa-2x ">
+                                    <i class="fa fa-circle fa-stack-2x xero-blue"></i>
+                                    <i class="fab fa-slack-hash fa-stack-1x fa-inverse"></i>
+                                </span>    
+                                <h3>League</h3>
+                            </a>                        
+                        </li>
+                        
+                    </ul>
+
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- ************************* -->
+    <!-- ******** MODALS  ******** -->
+
+    <!-- Modal - Health Care -->
+    <div class="modal fade" tabindex="-1" id="modalEligibleHealth" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-info h4" style="margin-bottom: 0px;">
+                     <i class="fa fa-stethoscope"></i> &nbsp;
+                    Eligible Health Care Expenses
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-window-close"></i>
+                    </button>
+                </div>
+                <!-- Tab content -->
+                <div class="modal-body" style="padding: 0px;">
+                
+                    <!-- iFrame to Eligiblity website -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/lines-330-331-eligible-medical-expenses-you-claim-on-your-tax-return/details-medical-expenses.html#rcndtnr frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>                                   
+                </div>
+                <div class="modal-footer" style="border-top: 0px !important;">
+                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                        <i class="fa fa-times"></i>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+                                              
+                                              
+                                              
+    <!-- Modal - Lifestyle -->
+    <div class="modal fade" tabindex="-1" id="modalEligibleLifestyle" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header panel-heading h4" style="margin-bottom: 0px; padding: 1rem; color: #461bcc; background-color: #ece6f8;">
+                    <i class="fa fa-bicycle"></i> &nbsp; Eligible Lifestyle Expenses
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-window-close"></i>
+                    </button>
+                </div>
+                <!-- Tab content -->
+                <div class="modal-body">
+                    
+                   <p class="text-center">
+                            <a href="https://taniablanchard.github.io/FlexPerksCalc/Shopify_Talent_Flex-Perks_2018-LSA.pdf" target="_blank" class="btn btn-sm" style="font-weight: 500; background-color: #461bcc; color: #fff;">
+                                <i class="fa fa-download"></i> Download
+                            </a>
+                   </p>                                     
+                                                             
+                    <!-- iFrame to Eligiblity website -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                                                                   
+                      <iframe width="560" height="315" src="https://taniablanchard.github.io/FlexPerksCalc/Shopify_Talent_Flex-Perks_2018-LSA.pdf#view=FitH" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>   
+                </div>
+                <div class="modal-footer" style="border-top: 0px !important;">
+                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                        <i class="fa fa-times"></i>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+                                              
+                                              
+    <!-- Modal - Out of Pocket Expenses -->
+    <div class="modal fade" tabindex="-1" id="modalInsuranceCopay" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content panel-info">
+                <div class="modal-header panel-heading h4" style="margin-bottom: 0px; padding: 1rem;">
+                    <i class="fa fa-stethoscope"></i> &nbsp; What are Out-of-Pocket Expenses?
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-window-close"></i>
+                    </button>
+                </div>
+                <!-- Tab content -->
+                <div class="modal-body">
+                    <!-- Definition goes here -->
+
+
+                   <p>
+                        <strong>Deductibles:</strong> The amount you pay for covered health care services before our insurance plan starts to pay.
+                   </p>
+
+                   <p>
+                        <strong>Reimbursement Levels:</strong> The percentage of eligible expenses above the deductible that is eligible for reimbursement under the plan.                               
+                   </p>
+                   <p>
+                        <strong>Plan maximums:</strong> The annual maximum of coverage eligible under each benefit.
+                   </p>
+                   <p>                  
+                        <strong>Example:</strong> Massage Therapy has a reimbursement level of 80% and an annual maximum of $300. 
+                    </p>
+                    <p>
+                    You can find all the details on the out of pocket expenses on page 4 to 6 of the Great West Life Benefit Booklet
+                    </p>
+                </div>
+                <div class="modal-footer" style="border-top: 0px !important;">
+                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                        <i class="fa fa-times"></i>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>                                              
+    <!-- ************************* -->
+    <!-- ************************* -->
+    <!-- JQuery core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+    <!-- Custom scripts for this template -->
+    <script src="calc.js"></script>
+    <script>
+        /* CALCULATOR FUNCTIONS */
+            //Updates the balance of a category
+            function updateBalance(changedID, newVal, changedClass, totalsID) {
+                var myTotal = 0;
+                var myMax = 5451;
+                var currentTotal = 0;
+                if (changedClass == "TextBoxesGroup_RRSP") {
+                    currentTotal = getTotals(true, false);
+                } else if (changedClass == "TextBoxesGroup_Charity") {
+                    currentTotal = getTotals(false, true);
+                } else {
+                    currentTotal = getTotals(false, false);
+                }
+                $("." + changedClass).each(function(){
+                    if ($(this).val() == "") {
+                        myTotal = myTotal + 0;
+                    } else {
+                        myTotal = myTotal + parseInt($(this).val());    
+                    }
+                    
+                 });
+                var tempTotal = currentTotal + parseInt(newVal);
+                if (tempTotal >= myMax ) {
+                    alert("You can't use more than $" + (myMax-1) + ".");
+                    //Reset the last changed textbox's value to 0
+                    $("#" + changedID).val("");
+                    $("#" + changedID).focus();
+                              
+                    //Subtract the new value from the original subtotal to 
+                    //  reset the calculator for the invalid entry
+                    var resetTotal = myTotal - newVal;
+                    $("#" + totalsID).val(resetTotal);                            
+
+                } else {
+
+                    $("#" + totalsID).val(myTotal);   
+                }     
+
+                updateTotal();
+                
+            }
+
+            //Function that returns grand total of all category
+            function getTotals(skipRRSP, skipCharity) {
+                var grandTotal = 0;
+
+                $('.TextBoxesGroupTotals').each(function() {
+
+                    if ($(this).val() == "") {
+                        grandTotal = grandTotal + 0;
+                    } else {
+
+                        if (skipRRSP && $(this).hasClass("TextBoxesGroup_RRSP")) {
+                           grandTotal = grandTotal; 
+                        } else if (skipCharity && $(this).hasClass("TextBoxesGroup_Charity")) {
+                            grandTotal = grandTotal; 
+                        } else {
+                            grandTotal = grandTotal + parseInt($(this).val());    
+                        }
+                    }
+                    
+                });
+
+                return grandTotal;
+            }
+
+            //Updates the Grand Total field
+            function updateTotal() {
+                var grandTotal = 0;
+
+                grandTotal = getTotals(false, false);
+               
+                $("#txtTotal").val(grandTotal);
+
+            }
+
+
+
+        /* TEXTBOX TRIGGERS */
+            $('.TextBoxesGroupHCSA').each(function() {
+                $(this).change(function () {
+                    updateBalance($(this).attr('id'), $(this).val(), "TextBoxesGroupHCSA", "txtBalanceHCSA" );
+                });
+            });
+
+            $('.TextBoxesGroupLSA').each(function() {
+                $(this).change(function () {
+                    updateBalance($(this).attr('id'), $(this).val(), "TextBoxesGroupLSA", "txtBalanceLSA" );
+                });
+            });
+
+            $(".TextBoxesGroup_RRSP").change(function () {
+                updateBalance($(this).attr('id'), $(this).val(), "TextBoxesGroup_RRSP", "txtBalanceRRSP" );
+            });
+            
+            $(".TextBoxesGroup_Charity").change(function () {
+                updateBalance($(this).attr('id'), $(this).val(), "TextBoxesGroup_Charity", "txtBalanceCharity" );
+            });
+
+
+
+        /* RESET BUTTONS */
+            //Resets the form HCA
+            $("#cmdResetHCSA").click(function() {
+
+                $('.TextBoxesGroupHCSA').each(function(){
+
+                    $(this).val("");
+
+                    $("#txtBalanceHCSA").val("");
+
+                 });
+
+                updateTotal(false, false);
+            });
+
+            //Resets form LCA
+            $("#cmdResetLSA").click(function() {
+
+                $('.TextBoxesGroupLSA').each(function(){
+
+                    $(this).val("");
+
+                    $("#txtBalanceLSA").val("");
+                    
+                 });
+                
+                updateTotal(false, false);
+            });
+
+
+            //Resets form RRSP
+            $("#cmdResetRRSP").click(function() {
+
+                    $("#txtBalanceRRSP").val("");
+
+                    updateTotal(false, false);         
+            });
+
+            //Resets form Charity
+            $("#cmdResetCharity").click(function() {
+
+                    $("#txtBalanceCharity").val("");
+
+                    updateTotal(false, false);
+            });
+
+    </script>
+
+</body>
+</html>
